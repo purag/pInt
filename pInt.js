@@ -1,13 +1,12 @@
 function pInt (num) {
-    this.num = num.toString();
+    var x = num.toString();
     
     this.toString = function () {
-        return this.num;
+        return x;
     };
     
     this.plus = function (y) {
-        var x = this.num;
-		if (y instanceof pInt) y = y.toString();
+        if (y instanceof pInt) y = y.toString();
 
         var sum = new Array(x.length + y.length);
         var i = x.length - 1,
@@ -33,8 +32,7 @@ function pInt (num) {
     };
 
     this.times = function (y) {
-        var x = this.num;
-		if (y instanceof pInt) y = y.toString();
+        if (y instanceof pInt) y = y.toString();
         
         var product = new Array(x.length + y.length);
 
